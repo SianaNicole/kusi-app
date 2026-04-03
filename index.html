@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫕</text></svg>"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Kusina — Your Personal Recipe Book"/>
+  <title>Kusina</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body, #root { min-height: 100%; width: 100%; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(145deg, #FDF8F2 0%, #F9EFE4 40%, #F5E8DB 100%);
+      background-attachment: fixed;
+      color: #1A0E06;
+      -webkit-font-smoothing: antialiased;
+    }
+    button { font-family: 'Inter', sans-serif; }
+    input, textarea, select { font-family: 'Inter', sans-serif; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    ::selection { background: rgba(212,84,26,0.18); }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #F6EEE4; }
+    ::-webkit-scrollbar-thumb { background: #D4B898; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #D4541A; }
+    /* Input focus glow */
+    input:focus, textarea:focus, select:focus {
+      border-color: #D4541A !important;
+      box-shadow: 0 0 0 3px rgba(212,84,26,0.12) !important;
+    }
+    /* Transitions */
+    @keyframes fadeUp   { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeIn   { from { opacity:0; } to { opacity:1; } }
+    @keyframes scaleIn  { from { opacity:0; transform:scale(0.94); } to { opacity:1; transform:scale(1); } }
+    @keyframes slideInR { from { opacity:0; transform:translateX(24px); } to { opacity:1; transform:translateX(0); } }
+    @keyframes spin     { from { transform:rotate(0deg); } to { transform:rotate(360deg); } }
+    @keyframes pulse    { 0%,100% { opacity:1; } 50% { opacity:0.5; } }
+    @keyframes shimmer  { 0% { background-position:-200% 0; } 100% { background-position:200% 0; } }
+    @keyframes bounce   { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-4px); } }
+    .leaflet-container { border-radius: 16px; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
